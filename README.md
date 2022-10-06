@@ -133,6 +133,12 @@ we have you covered. In this repository, you'll find everything you need for thi
 #### ℹ️ Notes:
 - If you already have a token from previous session you can use it. A token is not related to a particular DB by default but to organization.
 
+> **⚠️ Important**
+> ```
+> The instructor will show you on screen how to create a token 
+> but will have to destroy to token immediately for security reasons.
+> ```
+
 ## 7. Start and setup Gitpod
 
 - Start gitpod with the button below *(right-click open in new tab)*

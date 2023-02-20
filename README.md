@@ -30,7 +30,7 @@ Learn how to build an app end-to-end application with Spring ecosystem *(boot, m
 - [1.6 - Create Schema](#16---create-schema)
 - [1.7 - Load Data](#17---load-data)
 
-**LAB2 - Application**
+[**LAB2 - Application Implementation**](#2-application-implementation)
 - [Use Application as anonymous](#10-use-application-as-anonymous)
 - [Setup Authentication](#11-setup-authentication)
 - [Authenticate and use application](#12-authenticate-and-use-application)
@@ -112,7 +112,7 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 ## 1. Database Initialization
 
-#### 1.1 - Create an Astra Account
+### 1.1 - Create an Astra Account
 
 > **Note**: **Datastax Astra** is a cloud-native, fully managed database-as-a-service (DBaaS) based on Apache Cassandra. It provides a scalable, performant and highly available database solution without the operational overhead of managing Cassandra clusters. Astra supports both SQL and NoSQL APIs, and includes features like backup and restore, monitoring and alerting, and access control. It enables developers to focus on application development while the database infrastructure is managed by Datastax.
 
@@ -120,7 +120,7 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 ![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-1.png?raw=true)
 
-#### 1.2 - Create an Astra Token
+### 1.2 - Create an Astra Token
 
 - `✅ 1.2.a` Locate `Settings` (#1) in the menu on the left, then `Token Management` (#2) 
 
@@ -132,7 +132,7 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 ![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-3.png?raw=true)
 
-#### 5.3 - Open your Environment
+### 1.3 - Open your Environment
 
 > **Note**: **Gitpod** is a cloud-based integrated development environment (IDE) that allows developers to build, test and run applications directly in their web browser. It provides preconfigured dev environments for GitHub projects, so developers can start coding immediately without setting up local environment. Gitpod saves time and streamlines the development process.
 
@@ -140,7 +140,7 @@ we have you covered. In this repository, you'll find everything you need for thi
 >
 > [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-betterreads)
 
-#### 1.4 - Setup Astra CLI
+### 1.4 - Setup Astra CLI
 
 > **Note**:  The **Astra CLI** is a command-line interface (CLI) tool for managing Apache Cassandra databases hosted on Datastax Astra. It allows developers to perform tasks like creating and managing databases, executing Cassandra queries, and managing security and access control. The Astra CLI simplifies database management and provides an alternative to the Astra web interface, enabling automation and integration with other tools and workflows.
 
@@ -206,7 +206,7 @@ astra user list
 > +--------------------------------------+-----------------------------+---------------------+
 > ```
 
-#### 1.5 - Create database
+### 1.5 - Create database
 
 - `✅ 1.5.a` **Create database `workshops` with keyspace `better_reads`**
 
@@ -279,7 +279,7 @@ astra db get workshops
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-#### 1.6 - Create Schema
+### 1.6 - Create Schema
 
 - `✅ 1.6.a` **Check tables list leveraging `cqlsh`**
 
@@ -323,7 +323,7 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-#### 1.7 - Load Data
+### 1.7 - Load Data
 
 - `✅ 1.7.a` **Show content of the CSV File**
 
@@ -346,7 +346,7 @@ head -n 10 /workspace/workshop-betterreads/dataset/book_by_id_0.csv
 > OL10001538W,"[\"OL3966709A\"]","[]",,"D'affectueuses révérences","[]",2009-12-11
 > ```
 
-- `✅ 5.7.b` **Check how many rows. It should have more than 250k**
+- `✅ 1.7.b` **Check how many rows. It should have more than 250k**
 
 ```
 wc -l /workspace/workshop-betterreads/dataset/book_by_id_0.csv
@@ -358,7 +358,7 @@ wc -l /workspace/workshop-betterreads/dataset/book_by_id_0.csv
 > 250437 ./dataset/book_by_id_0.csv
 > ```
 
-- `✅ 5.7.c` **Populate table `book_by_id` from the csv `book_by_id_0`**
+- `✅ 1.7.c` **Populate table `book_by_id` from the csv `book_by_id_0`**
 
 ```
 astra db load workshops \
@@ -395,7 +395,7 @@ astra db load workshops \
 > Operation LOAD_20220214-185449-001328 completed with 183 > errors in 1 minute and 7 seconds.
 > ```
 
-- `✅ 5.7.d` **Populate table `book_by_id` from the csv `book_by_id_1`**
+- `✅ 1.7.d` **Populate table `book_by_id` from the csv `book_by_id_1`**
 
 ```
 astra db load workshops \
@@ -413,7 +413,7 @@ astra db load workshops \
 > Operation LOAD_20230220-153154-071483 completed with 138 errors in 2 minutes and 19 seconds.
 > ```
 
-- `✅ 5.7.e` **Count Records in the table `book_by_id`**
+- `✅ 1.7.e` **Count Records in the table `book_by_id`**
 
 ```
 astra db count workshops \
@@ -432,20 +432,102 @@ astra db count workshops \
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 6. Spring Applications
+## 2. Application Implementation
 
-#### 6.1 - Configuration
+### 2.1 - Configuration
 
-
+- `✅ 2.1.a` **Generate `.env` file**
 
 ```
+cd /workspace/workshop-betterreads/better-reads-webapp
 astra db create-dotenv workshops -k better_reads
+cat .env
+```
+
+> 🖥️ `output`
+>
+> _Values have been omitted in this guide for security reason_
+> ```
+> ASTRA_DB_APPLICATION_TOKEN=...
+> ASTRA_DB_GRAPHQL_URL=...
+> ASTRA_DB_GRAPHQL_URL_ADMIN=...
+> ASTRA_DB_GRAPHQL_URL_PLAYGROUND=...
+> ASTRA_DB_GRAPHQL_URL_SCHEMA=...
+> ASTRA_DB_ID=...
+> ASTRA_DB_KEYSPACE="better_reads"
+> ASTRA_DB_REGION="us-east1"
+> ASTRA_DB_REST_URL=...
+> ASTRA_DB_REST_URL_SWAGGER=...
+> ASTRA_DB_SECURE_BUNDLE_PATH=...
+> ASTRA_DB_SECURE_BUNDLE_URL=...
+> ASTRA_ORG_ID=...
+> ASTRA_ORG_NAME=...
+> ASTRA_ORG_TOKEN=...
+> ```
+
+- `✅ 2.1.b` **Load `.env` as environment variables**
+
+```
 set -a
 source .env
 set +a
 env | grep ASTRA
 ```
 
+> 🖥️ `output`
+>
+> _Same as before_
+
+
+- `✅ 2.1.c` **Open configuration file**
+
+- Open project configuration 
+
+```
+gp open /workspace/workshop-betterreads/better-reads-webapp/pom.xml
+```
+
+- Locate the declaration of the `spring-boot-starter`
+
+```xml
+<dependency>
+	<groupId>com.datastax.astra</groupId>
+	<artifactId>astra-spring-boot-starter</artifactId>
+  <version>${astra-sdk.version}</version>
+</dependency>
+```
+
+- `✅ 2.1.d` **Open `application.yaml` file**
+
+```
+gp open /workspace/workshop-betterreads/better-reads-webapp/src/main/resources/application.yml
+```
+
+- Notice how the variables are used
+
+```yaml
+astra:
+  api:
+    application-token: ${ASTRA_ORG_TOKEN}
+    database-id: ${ASTRA_DB_ID}
+    database-region: ${ASTRA_DB_REGION}
+```
+
+- We could have let Spring Data generate the tables for us based on the entities but it is a bad practice
+
+```yaml
+spring:
+  application:
+    name: betterreads
+  data:
+    cassandra:
+      schema-action: create-if-not-exists
+```
+
+### 2.2 - Application Start
+
+
+- `✅ 2.1.d` **Open `application.yaml` file**
 
 - It would be handy to know the URL of the application
 

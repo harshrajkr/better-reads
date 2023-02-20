@@ -17,13 +17,18 @@ Learn how to build an app end-to-end application with Spring ecosystem *(boot, m
 
 <img src="https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/screenshot.png?raw=true" align="right" width="400px"/>
 
-1. [Objectives](#1-objectives)
-2. [Acknowledgements](#2-acknowledgements)
-3. [Frequently asked questions](#3-frequently-asked-questions)
-4. [Materials for the Session](#4-materials-for-the-session)
-5. [Create your Database](#5-create-astra-db-instance)
-6. [Create your Token](#6-create-astra-token)
-7. [Start and setup Gitpod](#7-start-and-setup-gitpod)
+**MATERIALS**
+
+A. [Objectives](#1-objectives)
+B. [Acknowledgements](#2-acknowledgements)
+C. [Frequently asked questions](#3-frequently-asked-questions)
+D. [Materials for the Session](#4-materials-for-the-session)
+
+**LABS**
+1. [Database Setup](#5-create-astra-db-instance)
+  1.1 [test](#)
+2. [Create your Token](#6-create-astra-token)
+3. [Start and setup Gitpod](#7-start-and-setup-gitpod)
 8. [Work with CqlSh](#8-work-with-cqlsh)
 9. [Load Data with DSBulk](#9-load-data-with-dsbulk)
 10. [Use Application as anonymous](#10-use-application-as-anonymous)
@@ -259,18 +264,16 @@ astra db get workshops
 > | Attribute              | Value                                   |
 > +------------------------+-----------------------------------------+
 > | Name                   | workshops                               |
-> | id                     | bb61cfd6-2702-4b19-97b6-3b89a04c9be7    |
+> | id                     | 906ef2f2-07d0-472c-add6-fe719cf61d02    |
 > | Status                 | ACTIVE                                  |
 > | Default Cloud Provider | GCP                                     |
 > | Default Region         | us-east1                                |
 > | Default Keyspace       | better_reads                            |
-> | Creation Time          | 2022-08-29T06:13:06Z                    |
+> | Creation Time          | 2023-02-20T12:06:21Z                    |
 > |                        |                                         |
-> | Keyspaces              | [0] booking                             |
+> | Keyspaces              | [0] better_reads                        |
 > |                        |                                         |
-> |                        |                                         |
-> | Regions                | [0] us-east-1                           |
-> |                        |                                         |
+> | Regions                | [0] us-east1                            |
 > +------------------------+-----------------------------------------+
 > ```
 
@@ -294,7 +297,9 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 - `✅ 5.6.b` **Create tables**
 
 ```bash
-astra db cqlsh workshops -k better_reads -f /workspace/workshop-betterreads/dataset/schema-ddl.cql
+astra db cqlsh workshops \
+   -k better_reads \
+   -f /workspace/workshop-betterreads/dataset/schema-ddl.cql
 ```
 
 > 🖥️ `output`
@@ -353,17 +358,15 @@ wc -l /workspace/workshop-betterreads/dataset/book_by_id_0.csv
 > 250437 ./dataset/book_by_id_0.csv
 > ```
 
-- `✅ 5.7.c` **Populate table `book_by_id_0` from the csv**
+- `✅ 5.7.c` **Populate table `book_by_id` from the csv `book_by_id_0`**
 
 ```
 astra db load workshops \
      -k better_reads \
      -t book_by_id \
      -maxErrors -1 \
-     -url ./dataset/book_by_id_0.csv
+     -url /workspace/workshop-betterreads/dataset/book_by_id_0.csv
 ```
-
-> **Note**; The operation should take about 1 minute to complete. The file can have some errors like invalid title with special characters. IT IS NOT A PROBLEM the dataset is not perfect we will have some failed rows.
 
 - The batch is running and should be able to see the throughput at ~3k records per second.
 
@@ -392,35 +395,48 @@ astra db load workshops \
 > Operation LOAD_20220214-185449-001328 completed with 183 > errors in 1 minute and 7 seconds.
 > ```
 
-- In the same way - you can also now import `book_by_id_1.csv`.
-
-- Count Records in the table `book_by_id`
+- `✅ 5.7.d` **Populate table `book_by_id` from the csv `book_by_id_1`**
 
 ```
-/workspace/workshop-betterreads/tools/dsbulk-1.8.0/bin/dsbulk count \
-   -k better_reads \
-   -t book_by_id \
-   -u token \
-   -p ${ASTRA_DB_ADMIN_TOKEN} \
-   -b /home/gitpod/.astra/scb_${ASTRA_DB_ID}_${ASTRA_DB_REGION}.zip
+astra db load workshops \
+     -k better_reads \
+     -t book_by_id \
+     -maxErrors -1 \
+     -url /workspace/workshop-betterreads/dataset/book_by_id_1.csv
 ```
 
-- Expected output (about 500.000k), during the live speaker will have more because he imported way more files.
+> 🖥️ `output`
+>
+> ```
+>  total | failed | rows/s |  p50ms |  p99ms | p999ms | batches
+> 250,000 |    138 |  1,787 | 106.92 | 136.31 | 398.46 |    1.00
+> Operation LOAD_20230220-153154-071483 completed with 138 errors in 2 minutes and 19 seconds.
+> ```
+
+- `✅ 5.7.e` **Count Records in the table `book_by_id`**
 
 ```
-Picked up JAVA_TOOL_OPTIONS:  -Xmx2576m
-Username and password provided but auth provider not specified, inferring PlainTextAuthProvider
-A cloud secure connect bundle was provided: ignoring all explicit contact points.
-Operation directory: /workspace/workshop-betterreads/logs/COUNT_20220214-190203-775866
-  total | failed | rows/s |  p50ms |    p99ms |   p999ms
-499,679 |      0 | 57,806 | 210.15 | 6,207.57 | 6,207.57
-Operation COUNT_20220214-190203-775866 completed successfully in 8 seconds.
-499679
+astra db count workshops \
+     -k better_reads \
+     -t book_by_id \
 ```
+
+> 🖥️ `output`
+>
+> ```
+> Picked up JAVA_TOOL_OPTIONS:  -Xmx2576m
+>  total | failed | rows/s |  p50ms |    p99ms |   p999ms
+> 499,679 |      0 | 57,806 | 210.15 | 6,207.57 | 6,207.57
+> 
+> ```
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 10. Use Application as anonymous
+## 6. Spring Applications
+
+#### 6.1 - Configuration
+
+
 
 ```
 astra db create-dotenv workshops -k better_reads

@@ -11,22 +11,20 @@
 
 Learn how to build an app end-to-end application with Spring ecosystem *(boot, mvc, security, data, test, thymeleaf)* and Apache Cassandra™.
 
-[🏁 Access HANDS-ON](#-start-hands-on)
-
 ## 📋 Table of content
 
 <img src="https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/screenshot.png?raw=true" align="right" width="400px"/>
 
 **MATERIALS**
+- [Objectives](#1-objectives)
+- [Acknowledgements](#2-acknowledgements)
+- [Frequently asked questions](#3-frequently-asked-questions)
+- [Materials for the Session](#4-materials-for-the-session)
 
-A. [Objectives](#1-objectives)
-B. [Acknowledgements](#2-acknowledgements)
-C. [Frequently asked questions](#3-frequently-asked-questions)
-D. [Materials for the Session](#4-materials-for-the-session)
+**LAB1 - Database Setup**
+- 1.1 [test](#)
+- 1.2 [test](#)
 
-**LABS**
-1. [Database Setup](#5-create-astra-db-instance)
-  1.1 [test](#)
 2. [Create your Token](#6-create-astra-token)
 3. [Start and setup Gitpod](#7-start-and-setup-gitpod)
 8. [Work with CqlSh](#8-work-with-cqlsh)

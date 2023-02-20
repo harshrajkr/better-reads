@@ -234,7 +234,7 @@ astra db create workshops -k better_reads --if-not-exist
 > [OK]    Database 'workshops' is ready.
 > ```
 
-- `✅ 1.5.b` **Check the status of database `workshops`**
+- `✅ 5.5.b` **Check the status of database `workshops`**
 
 ```bash
 astra db status workshops
@@ -246,7 +246,7 @@ astra db status workshops
 > [ INFO ] - Database 'workshops' has status 'ACTIVE'
 > ```
 
-- `✅ 1.5.c` **Get the informations for your database including the keyspace list**
+- `✅ 5.5.c` **Get the informations for your database including the keyspace list**
 
 ```bash
 astra db get workshops
@@ -276,127 +276,121 @@ astra db get workshops
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 8. Work with CqlSh
+#### 5.6 - Create Schema
 
-#### ✅ 8a. Open new Terminal
-
-It would be handy to have access to this CQLSH while doing the exercises and check the content of the database.
-
-- Open a new terminal with the icon looking like a small table on top right hand corner of the Terminal Panel in gitpod (as shown below)
-
-![new_terminal2](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/new-terminal1.png?raw=true)
-
-... zooming in:  
-
-![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/new-terminal2.png?raw=true)
-
-#### ✅ 8b. Enter the interactive Cqlsh *(it is a script we have created for you)*
-
-```
-/workspace/workshop-betterreads/cqlsh
-```
-
-- It should look like
-
-```
-Connected to cndb at 127.0.0.1:9042.
-[cqlsh 6.8.0 | Cassandra 4.0.0.6816 | CQL spec 3.4.5 | Native protocol v4]
-Use HELP for help.
-token@cqlsh>
-```
-
-- List Keyspaces with 
-
-```sql
-describe keyspaces;
-```
-
-- Check that our keyspace `better_reads` is there
-
-```
-token@cqlsh> describe keyspaces;
-
-system_virtual_schema  system_auth   data_endpoint_auth  system_traces
-temporal_visibility    system_views  better_reads        ecommerce    
-netflix                system        spring_petclinic    todos        
-system_schema          datastax_sla  native_java         feeds_reader 
-
-token@cqlsh> 
-```
-
-- List `better_reads` tables
-
-```
-use better_reads;
-describe tables;
-```
-
-- Check that expected tables are there
+- `✅ 5.6.a` **Check tables list leveraging `cqlsh`**
 
 ```bash
-token@cqlsh:better_reads> describe tables;
-
-author_by_id  books_by_user  book_by_id  book_by_user_and_bookid
+astra db cqlsh workshops -k better_reads -e "describe tables;"
 ```
 
-- Let this panel opened but for following command we will be back to the termimal
-- 
+> 🖥️ `output`
+>
+> ```
+> <empty>
+> ```
+
+
+- `✅ 5.6.b` **Create tables**
+
+```bash
+astra db cqlsh workshops -k better_reads -f /workspace/workshop-betterreads/dataset/schema-ddl.cql
+```
+
+> 🖥️ `output`
+>
+> ```
+> [INFO] Secure connect bundles have been downloaded.
+> [INFO] Cqlsh is starting, please wait for connection establishment...
+> ```
+
+- `✅ 5.6.c` **List tables**
+
+```bash
+astra db cqlsh workshops -k better_reads -e "describe tables;"
+```
+
+> 🖥️ `output`
+>
+> ```
+> author_by_id  book_by_id  book_by_user_and_bookid  books_by_user
+> ```
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 9. Load Data with DSBulk
+#### 5.7 - Load Data
 
-- Check you have the dataset ready. In the `BASH` terminal **(⚠️ = NOT the cqlsh)**. You should see the cql file `book_by_id_0.csv`.
+- `✅ 5.7.a` **Show content of the CSV File**
 
 ```
-ls -l /workspace/workshop-betterreads/dataset/
+head -n 10 /workspace/workshop-betterreads/dataset/book_by_id_0.csv 
 ```
 
-- Check how many rows. It should have more than 250k.
+> 🖥️ `output`
+>
+> ```
+> id,author_id,author_names,book_description,book_name,cover_ids,published_date
+> OL10000049W,"[\"OL3964979A\"]","[]",,"Le crime organise/quatre films exemplaires","[\"3140091\"]",2009-12-11
+> OL10000394W,"[\"OL3965434A\"]","[]",,"Portraits of Illusions","[\"3140733\"]",2009-12-11
+> OL10000415W,"[\"OL3965461A\"]","[]",,"Le Berceau du monde","[\"3140790\"]",2009-12-11
+> OL10000427W,"[\"OL3965478A\"]","[]",,"La fracture identitaire","[]",2009-12-11
+> OL10000471W,"[\"OL3965508A\"]","[]",,"Jamiroquaï de A à Z","[\"3140910\"]",2009-12-11
+> OL10001081W,"[\"OL3966201A\"]","[]",,"Contes soufis, tome 1","[\"3142335\"]",2009-12-11
+> OL10001150W,"[\"OL3966289A\"]","[]",,"Le prix de la terre","[\"3142514\"]",2009-12-11
+> OL10001271W,"[\"OL3966392A\"]","[]",,"Balzac","[\"3142712\"]",2009-12-11
+> OL10001538W,"[\"OL3966709A\"]","[]",,"D'affectueuses révérences","[]",2009-12-11
+> ```
+
+- `✅ 5.7.b` **Check how many rows. It should have more than 250k**
 
 ```
 wc -l /workspace/workshop-betterreads/dataset/book_by_id_0.csv
 ```
 
-- Check that Datastax bulk loader is properly installed *(It has been installed for you at startup)*
+> 🖥️ `output`
+>
+> ```
+> 250437 ./dataset/book_by_id_0.csv
+> ```
+
+- `✅ 5.7.c` **Populate table `book_by_id_0` from the csv**
 
 ```
-/workspace/workshop-betterreads/tools/dsbulk-1.8.0/bin/dsbulk --version
+astra db load workshops \
+     -k better_reads \
+     -t book_by_id \
+     -maxErrors -1 \
+     -url ./dataset/book_by_id_0.csv
 ```
 
-- Import the DataSet with the following command
-
-```
-/workspace/workshop-betterreads/tools/dsbulk-1.8.0/bin/dsbulk load \
-   -c csv \
-   -k better_reads \
-   -t book_by_id \
-   -u token \
-   -p ${ASTRA_DB_ADMIN_TOKEN} \
-   -maxErrors -1 \
-   -b /home/gitpod/.astra/scb_${ASTRA_DB_ID}_${ASTRA_DB_REGION}.zip \
-   -url /workspace/workshop-betterreads/dataset/book_by_id_0.csv
-```
+> **Note**; The operation should take about 1 minute to complete. The file can have some errors like invalid title with special characters. IT IS NOT A PROBLEM the dataset is not perfect we will have some failed rows.
 
 - The batch is running and should be able to see the throughput at ~3k records per second.
 
-```
-Picked up JAVA_TOOL_OPTIONS:  -Xmx2576m
-Username and password provided but auth provider not specified, inferring PlainTextAuthProvider
-A cloud secure connect bundle was provided: ignoring all explicit contact points.
-A cloud secure connect bundle was provided and selected operation performs writes: changing default consistency level to LOCAL_QUORUM.
-Operation directory: /workspace/workshop-betterreads/logs/LOAD_20220214-132501-509314
- total | failed | rows/s | p50ms | p99ms | p999ms | batches
-17,152 |      0 |  3,074 | 22.68 | 58.98 | 103.81 |    1.00
-```
+> 🖥️ `output`
+>
+> ```
+> [INFO] Secure connect bundles have been downloaded.
+> [INFO] RUNNING: dsbulk load -u token -p xxxxb -b /yyy1.zip -k better_reads -t book_by_id -logDir ./logs --log.verbosity normal --schema.allowMissingFields true -maxConcurrentQueries AUTO -delim , -url ./dataset/book_by_id_0.csv -header true -encoding UTF-8 -skipRecords 0 -maxErrors -1
+> [INFO] DSBulk is starting please wait ...
+> Username and password provided but auth provider not specified, inferring PlainTextAuthProvider
+> A cloud secure connect bundle was provided: ignoring all explicit contact points.
+> A cloud secure connect bundle was provided and selected operation performs writes: changing default consistency level to LOCAL_QUORUM.
+> ...
+>  total | failed | rows/s |  p50ms |  p99ms | p999ms | batches
+> 18,944 |      0 |  1,706 | 107.08 | 134.22 | 182.45 |    1.00
+> ...
+> ```
 
 - The operation should take about 1 minute to complete. The file can have some errors like invalid title with special characters. IT IS NOT A PROBLEM the dataset is not perfect we will have some failed rows.
 
-```
-  total | failed | rows/s | p50ms | p99ms | p999ms | batches
-250,000 |    183 |  3,684 | 21.44 | 56.10 |  66.32 |    1.00
-Operation LOAD_20220214-185449-001328 completed with 183 errors in 1 minute and 7 seconds.
-```
+> 🖥️ `output`
+>
+> ```
+>  total | failed | rows/s | p50ms | p99ms | p999ms | batches
+> 250,000 |    183 |  3,684 | 21.44 | 56.10 |  66.32 |    1.00
+> Operation LOAD_20220214-185449-001328 completed with 183 > errors in 1 minute and 7 seconds.
+> ```
 
 - In the same way - you can also now import `book_by_id_1.csv`.
 
@@ -427,6 +421,15 @@ Operation COUNT_20220214-190203-775866 completed successfully in 8 seconds.
 [🏠 Back to Table of Contents](#-table-of-content)
 
 ## 10. Use Application as anonymous
+
+```
+astra db create-dotenv workshops -k better_reads
+set -a
+source .env
+set +a
+env | grep ASTRA
+```
+
 
 - It would be handy to know the URL of the application
 

@@ -22,7 +22,7 @@ spring:
 
 astra:
   api:
-    application-token: ${ASTRA_DB_ADMIN_TOKEN}
+    application-token: ${ASTRA_ORG_TOKEN}
     database-id: ${ASTRA_DB_ID}
     database-region: ${ASTRA_DB_REGION}
   cql:

@@ -1,0 +1,855 @@
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 19034
+Source: OL15434011W,"[\"OL6837604A\"]","[\"Celestin Louis Tanon\"]",,"L'Ordre du procès civil au XIVe siècle au Châtelet de Paris \","[]",2010-10-30\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 19691
+Source: OL15595402W,"[\"OL6876126A\"]","[\"Mezhdunarodnai︠a︡ nauchnai︠a︡ konferent︠s︡ii︠a︡ "Distant︠s︡ionnoe zondirovanie prirodnoĭ sredy" (3rd 2006 Minsk, Belarus)\"]",,"Distant︠s︡ionnoe zondirovanie prirodnoĭ sredy","[]",2010-12-16\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 20933
+Source: OL15939030W,"[\"OL6942649A\"]","[\"Nauchno-prakticheskai︠a︡ konferent︠s︡ii︠a︡ "Mezhdunarodnoe sotrudnichestvo stran Severo-Vostochnoĭ Azii--problemy i perspektivy" (2010 Chita, Chitinskai︠a︡ oblastʹ, Russia)\"]",,"Mezhdunarodnoe sotrudnichestvo stran Severo-Vostochnoĭ Azii","[]",2011-07-26\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 21214
+Source: OL16005622W,"[\"OL6962145A\"]","[\"International Conference "Management of Large-Scale System Development" (4th 2010 Moscow, Russia)\"]",,"Upravlenie razvitiem krupnomasshtabnykh sistem, MLSD'2010","[]",2011-07-30\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 21663
+Source: OL16138971W,"[\"OL6994221A\"]","[\"Konferenz "Der Föderalstaat nach dem Berlin-Urteil" (2006 Berlin, Germany)\"]",,"Der Föderalstaat nach dem Berlin-Urteil","[]",2011-10-22\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 22120
+Source: OL16285307W,"[\"OL7038376A\"]","[\"Vserossiĭskai︠a︡ nauchnai︠a︡ konferent︠s︡ii︠a︡ s mezhdunarodnym uchastiem "Istorii︠a︡ nauki i obrazovanii︠a︡ v Sibiri" (3rd 2009 Krasnoi︠a︡rsk, Russia)\"]",,"Istorii︠a︡ obrazovanii︠a︡ i nauki v Sibiri","[]",2011-11-16\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 22878
+Source: OL16473054W,"[\"OL7069323A\"]","[\"Kulturološki skup "Nove Istre" (1st 1998 Poreč, Croatia)\"]",,"Čitajući znakove vremena","[]",2012-01-25\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 41012
+Source: OL21155531W,"[\"OL8102695A\", \"OL7528546A\"]","[\"Paul "Whitey" Kapsalis\", \"Ted Gregory\"]",,"Leadership Code","[]",2020-08-05\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 46373
+Source: OL22617835W,"[\"OL8633891A\"]","[\"Seminário Temático "A  Matemática Moderna nas Escolas do Brasil e de Portugal: Estudos Históricos Comparativos" (7th 2009 Florianópolis, Santa Catarina, Brazil)\"]",,"A matemática moderna nas escolas do Brasil e Portugal","[]",2020-10-17\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 47675
+Source: OL22916279W,"[\"OL8711524A\"]","[\"Colloquium "Sint Maecenates, non deerunt, Flacce, Marones : formes de la poésie de circonstance de l'Antiquité à la Renaissance" (2010 Paris, France)\"]",,"La muse de l'éphémère","[]",2020-11-04\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 11.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 49043
+Source: OL23225933W,"[\"OL8805377A\"]","[\"International Conference on "Smart Materials, Structures, and Systems" (4th 2012 Terme, Italy)\"]",,"Wearable/wireless body sensor networks for healthcare applications","[]",2020-11-13\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 10.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 49619
+Source: OL23358758W,"[\"OL8861336A\"]","[\"Convegno "Architettura eremitica, sistemi progettuali e paesaggi culturali" (4th 2013 Chiusi della Verna, Italy)\"]",,"Architettura eremitica","[]",2020-11-14\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 50041
+Source: OL23459607W,"[\"OL8903596A\"]","[\"Nauchno-prakticheskai︠a︡ konferent︠s︡ii︠a︡ "Ėkspertno-kriminalisticheskai︠a︡ sluzhba na sovremennom ėtape, perspektivy ee razvitii︠a︡" (2009 Minsk, Belarus)\"]",,"Problemy kriminalistiki","[]",2020-11-15\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 52314
+Source: OL23982022W,"[\"OL9024933A\"]","[\"Mezhvuzovskai︠a︡ naucho-prakticheskai︠a︡ konferent︠s︡ii︠a︡ "Prioritety, problemy i perspektivy i︠a︡zykovogo obrazovani︠a︡ v Rossii XXI veka" (2005 Borisoglebsk, Russia)\"]",,"Prioritety, problemy i perspektivy i︠a︡zykovogo obrazovani︠a︡ v Rossii XXI veka","[]",2020-12-13\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 55116
+Source: OL24647708W,"[\"OL7546035A\"]","[\"""\"]",,"Pierre, ou comment une pièce de vingt francs peut devenir un sou. Traduit librement de l'anglais","[\"11335274\"]",2021-07-01\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 55885
+Source: OL24828722W,"[\"OL7546035A\"]","[\"""\"]",,"Les Étangs du Bas-Armagnac suivis de la céphalite, ou fièvre endémique de ce même Armagnac","[\"11639466\"]",2021-08-15\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 67595
+Source: OL3858057W,"[\"OL692393A\"]","[\"Nauchno-metodicheskai͡a ėkologicheskai͡a konferent͡sii͡a "Metody issledovanii͡a i ispolʹzovanii͡a gidrosistem" (1991 Riga, Latvia)\"]",,"Nauchno-metodicheskai͡a ėkologicheskai͡a konferent͡sii͡a Metody issledovanii͡a i ispolʹzovanii͡a gidrosistem","[]",2009-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 77587
+Source: OL6195147W,"[\"OL1595542A\"]","[\"Soveshchanie "Spiralʹnai͡a struktura galaktiki" (1977 Kiev, Ukraine)\"]",,"Trudy Soveshchanii͡a Spiralʹnai͡a struktura galaktiki","[]",2009-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 77759
+Source: OL6234157W,"[\"OL1614828A\"]","[]",,"Verġi mekhanizminin formalashmasy vă tăkmillăshdirilmăsi problemlări \","[]",2009-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 112577
+Source: OL15446859W,"[\"OL6840682A\"]","[\"Convegno internazionale di studio "Il carnevale e il Mediterraneo, tradizioni, riti e maschere del Mezzogiorno d'Italia" (2009 Putignano, Italy)\"]",,"Il carnevale e il Mediterraneo","[]",2010-11-09\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 10.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 112777
+Source: OL15497029W,"[\"OL6854458A\"]","[\""İstihdam, Kadın İşgücü ve Yeni İş Kanunu" Sempozyumu (2003 Muğla)\"]",,"İstihdam, Kadın İşgücü ve Yeni İş Kanunu Sempozyumu, Muğla, 5 Aralık 2003","[]",2010-11-23\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 113109
+Source: OL15584608W,"[\"OL6873016A\"]","[\"Encuentro Internacional "Revolución e insurgencia en América del Sur" (2007 Salta, Argentina)\"]",,"Entre la Colonia y la República","[]",2010-12-15\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 113532
+Source: OL15710634W,"[\"OL6894422A\"]","[\"Joseph Apollinaire Alonzo Allaire\"]",,"Notre-Dame des Victoires de Québec \","[]",2011-04-19\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 114159
+Source: OL15888785W,"[\"OL6929313A\"]","[\"Mezhdunarodnai︠a︡ nauchno-prakticheskai︠a︡ konferent︠s︡ii︠a︡ "Prirodnye i intellektualʹnye resursy Sibiri" (15th 2009 Irkutsk, Russia)\"]",,"Prirodnye i intellektualʹnye resursy Sibiri (SIBRESURS-15-2009)","[]",2011-07-22\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 114419
+Source: OL15956952W,"[\"OL6948361A\"]","[\"Znanstveni skup "Komparativna povijest hrvatske književnosti" (10th 2007 Split, Croatia)\"]",,"Komparativna povijest hrvatske književnosti","[]",2011-07-27\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 114707
+Source: OL16019605W,"[\"OL6966658A\"]","[\"Mezhdunarodnai︠a︡ nauchnai︠a︡ konferent︠s︡ii︠a︡ "Aktualʹnye voprosy inzhenernoĭ geologii i ėkologicheskoĭ geologii" (2010 Moscow, Russia)\"]",,"Aktualʹnye voprosy inzhenernoĭ geologii i ėkologicheskoĭ geologii","[]",2011-08-04\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 116075
+Source: OL16419263W,"[\"OL7058862A\"]","[\"Mezhdunarodnai︠a︡ konferent︠s︡ii︠a︡ "Folʹklor i my--tradit︠s︡ionnai︠a︡ kulʹtura v zerkale ee vosprii︠a︡tiĭ" (2006 Saint Petersburg, Russia)\"]",,"Folʹklor i my--tradit︠s︡ionnai︠a︡ kulʹtura v zerkale ee vosprii︠a︡tiĭ","[]",2011-12-29\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 118067
+Source: OL1689109W,"[\"OL191391A\"]","[\"Kulʹturolohichni chytanni͡a "Kulʹtura na zlami tysi͡acholitʹ" (1st 1994 Kiev, Ukraine)\"]",,"I Kulʹturolohichni chytanni͡a Kulʹtura na zlami tysi͡acholitʹ","[]",2009-12-09\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 131828
+Source: OL20468859W,"[\"OL7756522A\", \"OL7756523A\"]","[\"Bill "El Wingador" Simmons\", \"Joe Vallee\"]",,"Snow On The Barb Wire","[\"9133760\"]",2019-11-15\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 133259
+Source: OL20864358W,"[\"OL7977955A\", \"OL7977956A\"]","[\"Bob "Pritch" Pritchard\", \"Jensen Moore\"]",,"The Comprehensive Public Relations Reader","[\"10181263\"]",2020-06-14\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 139673
+Source: OL22627310W,"[\"OL8637971A\"]","[\"Conference "Change and stability--state, politics and religion in the Middle East and North Africa" (2009 Kraków, Poland)\"]",,"Dilemmas of democracy in the Middle East","[]",2020-10-17\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 141012
+Source: OL22940690W,"[\"OL8722145A\"]","[\"Mezhdunarodnai︠a︡ nauchnai︠a︡ konferent︠s︡ii︠a︡ "Evrei Evropy i Blizhnego Vostoka, istorii︠a︡, sot︠s︡iologii︠a︡, kulʹtura" (2014 Sankt-Petersburg, Russia)\"]",,"Evrei Evropy i Blizhnego Vostoka, istorii︠a︡, sot︠s︡iologii︠a︡, kulʹtura","[]",2020-11-04\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 11.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 142943
+Source: OL23396282W,"[\"OL6695405A\"]","[]",,"Āyīnʹhā-yi sunnatī-i nawrūz dar Gīlān \","[]",2020-11-14\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 145033
+Source: OL23890739W,"[\"OL8992233A\"]","[\"Naukovo-tekhnichna narada "Stan, perspektyvy ta napri︠a︡mky heolohorozviduvalʹnykh robit na almazy v Ukraïni" (2003 Kiev, Ukraine)\"]",,"Problemy almazonosnosti terytoriï Ukraïny","[]",2020-12-08\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 145885
+Source: OL24084729W,"[\"OL9061173A\"]","[\"Mezhregionalʹnai︠a︡ nauchno-prakticheskai︠a︡ konferent︠s︡ii︠a︡  "Grazhdanskoe obshchestvo: idei, realʹnostʹ, perspektivy" (2006 Kazanʹ, Russia)\"]",,"Grazhdanskoe obshchestvo","[]",2020-12-18\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 10.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 149679
+Source: OL2497259W,"[\"OL350173A\"]","[\"Esenni nat͡sionalni chetenii͡a "Profesor Ivan Gŭlŭbov" (1st 1990 Veliko Tŭrnovo, Bulgaria)\"]",,"Paleobalkanistika i starobŭlgaristika","[]",2009-12-09\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 162003
+Source: OL4221807W,"[\"OL807475A\"]","[\"Vsesoi͡uznyĭ simpozium "Molekuli͡arnye mekhanizmy geneticheskikh prot͡sessov" (6th 1987 Moscow, R.S.F.S.R.)\"]",,"Molekuli͡arnye mekhanizmy geneticheskikh prot͡sessov","[\"4879432\"]",2009-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 171274
+Source: OL6385471W,"[\"OL1679859A\"]","[\"Nauchna konferentsii͡a "Povishavane efektivnostta na naukata" (1976 Veliko Tŭrnovo, Bulgaria)\"]",,"Sbornik trudove, 27-28 maĭ 1976 g","[]",2009-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 177390
+Source: OL7801551W,"[\"OL2466582A\"]","[\"Konferent͡sii͡a "Dobrovolʹnai͡a sertifikat͡sii͡a lesoupravlenii͡a dli͡a ėksporta delovoĭ drevesiny" (1998 Petrozavodsk, Russia)\"]",,"Dobrovolʹnai͡a sertifikat͡sii͡a lesoupravlenii͡a dli͡a ėksporta delovoĭ drevesiny : materialy konfernt͡sii, Petrozavodsk, 12-14 noi͡abri͡a 1998 g","[]",2009-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 206519
+Source: OL15614314W,"[\"OL6880634A\"]","[\"Seminar "Sotrudnichestvo Seti 'Migrat︠s︡ii︠a︡ i Pravo' s FMS Rossii, UVKB OON, MOM i drugimi strukturami" (26th 2008 Moscow, Russia)\"]",,"Problemy primenenii︠a︡ migrat︠s︡ionnogo zakonodatelʹstva,  problemy zhilishchnogo obespechenii︠a︡ vynuzhdennykh migrantov : materialy dvadt︠s︡atʹ shestogo seminara Sotrudnichestvo Seti 'Migrat︠s︡ii︠a︡ i Pravo' s FMS Rossii, UVKB OON, MOM i drugimi strukturami provedennogo v ramkakh programmy Migrat︠s︡ii︠a︡ i pravo Pravozashc...
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 10.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 206674
+Source: OL15663161W,"[\"OL116264A\"]","[\"Barruel abbé\"]",,"Mémoires pour servir à l'histoire du jacobinisme \","[]",2011-01-25\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 206829
+Source: OL15709017W,"[\"OL6894028A\"]","[\"Abel Ridard\"]",,"Essai sur le douaire en Bourgogne \","[]",2011-04-15\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 6.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 206852
+Source: OL15712965W,"[\"OL6895016A\"]","[\""Ratikanta maiti", "Humberto Gonzalez Rodriguez", "Pratik Satya"\"]",,"Horizon of World Plant FIbers","[]",2011-04-24\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 208682
+Source: OL16241836W,"[\"OL7032919A\"]","[\"Studencheskai︠a︡ nauchnai︠a︡ konferent︠s︡ii︠a︡ "Filologii︠a︡ i vozmozhnye miry" (2008 Permʹ, Russia)\"]",,"Molodai︠a︡ filologii︠a︡","[]",2011-11-04\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 209612
+Source: OL16488590W,"[\"OL7073472A\"]","[\"Nauchnai︠a︡ konferent︠s︡ii︠a︡ "Sokhranenie bioraznoobrazii︠a︡ Kamchatki i prilegai︠u︡shchikh moreĭ" (11th 2010 Petropavlovsk-Kamchatskiĭ, Russia)\"]",,"Sokhranenie bioraznoobrazii︠a︡ Kamchatki i prilegai︠u︡shchikh moreĭ","[]",2012-02-01\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 210109
+Source: OL16606383W,"[\"OL7114866A\"]","[\"Kruglyĭ stol "Zakonodatelʹnoe obespechenie vozrozhdenii︠a︡ agropromyshlennogo kompleksa i lesnogo khozi︠a︡ĭstva Rossiĭskoĭ Federat︠s︡ii" (2010 Moscow, Russia)\"]",,"Chuzhim khlebom syt ne budeshʹ","[]",2012-04-25\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 210235
+Source: OL16635660W,"[\"OL7125608A\"]","[\"Nihon Kyōsantō. Akahata Seijibu. "Anpo, Gaikō" Han\"]",,"Jūzoku no dōmei","[]",2012-05-16\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 223316
+Source: OL20074328W,"[\"OL7617674A\"]","[\""Tu shuo tian xia, tan suo fa xian xi lie" bian wei hui\"]",,"Shi jie shi da kao gu fa xian =","[\"8748781\"]",2019-08-01\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 223548
+Source: OL20153726W,"[\"OL7634401A\", \"OL7634402A\"]","[\"James "Jinx" O'Connor\", \"Damen "Mr. C" Corrado\"]",,"Compliments of Chicagohoodz","[\"8798762\"]",2019-10-04\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 225852
+Source: OL20762153W,"[\"OL292484A\", \"OL7907622A\", \"OL7907623A\", \"OL4411502A\", \"OL7907624A\"]","[\"Jon "Goldy" Goldenbaum\", \"Buck Marr\", \"David Scoby\"]",,"Tales from the Beer Call","[]",2020-05-17\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [19 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 235550
+Source: OL23291763W,"[\"OL8834805A\"]","[\"Congreso Internacional Juan Ruiz, Arcipreste de Hita, y el "Libro de Buen Amor" (3rd 2011 Alcalá la Real, Spain)\"]",,"Juan Ruiz, Arcipreste de Hita, y el Libro de Buen Amor","[]",2020-11-14\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 235771
+Source: OL23344763W,"[\"OL8855350A\"]","[\"National Conference on Pension, Retirement Planning & Employee Benefits: "Sharing Responsibility for Assuming Long-term Financial Security (6th 2010 New Delhi, India)\"]",,"6th National Conference on Pension, Retirement Planning & Employee Benefits","[]",2020-11-14\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 236164
+Source: OL23433725W,"[\"OL8893781A\"]","[\"Seminario "Ecología, Municipio y Sociedad Civil. La Participación de las Organizaciones Sociales en la Defensa del Ambiente" (1991 Oaxtepec, Mexico)\"]",,"Ecología, municipio y sociedad civil","[]",2020-11-14\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 236552
+Source: OL23526383W,"[\"OL8911927A\"]","[\"Kolel "Tsemaḥ tsadiḳ" Ṿiznits (Brooklyn, New York, N.Y.)\"]",,"Ḳovets Torani Tsemaḥ tsadiḳ Ṿiznits","[]",2020-11-18\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 238279
+Source: OL23923305W,"[\"OL9003449A\"]","[\"Coloquio Internacional "Migraciones, Frontera y Sociedad" (1998 Huehuetenango, Guatemala)\"]",,"Migraciones, frontera y sociedad","[]",2020-12-10\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 239075
+Source: OL24116781W,"[\"OL9070839A\"]","[\"Musyawarah "Tudang Sipulung" (1981 Pangkajene, Sidenreng, Indonesia)\"]","R","Hasil rumusan Musyawarah Tudang Sipulung","[]",2020-12-22\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 9.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+
+Resource: file:/Users/cedricklunven/dev/workspaces/datastax-workshops/workshop-betterreads/dataset/book_by_id_0.csv
+Position: 239510
+Source: OL24224546W,"[\"OL9115409A\", \"OL9115410A\"]","[\"Mr. George "Bills" Trim\", \"Mr. George "Bills" Trim\"]",,"Amanda Learns...","[\"10687345\"]",2021-03-08\u000a
+java.lang.IllegalArgumentException: Expecting record to contain 7 fields but found 8.
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.<init>(DefaultRecord.java:120)
+	at com.datastax.oss.dsbulk.connectors.api.DefaultRecord.mapped(DefaultRecord.java:65)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.parseNext(CSVConnector.java:314)
+	at com.datastax.oss.dsbulk.connectors.csv.CSVConnector$CSVRecordReader.readNext(CSVConnector.java:291)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.doOnNext(ResultSubscription.java:457) [18 skipped]
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.drain(ResultSubscription.java:266)
+	at com.datastax.oss.dsbulk.executor.api.subscription.ResultSubscription.lambda$fetchNextPage$3(ResultSubscription.java:394)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.setFinalResult(CqlRequestHandler.java:324) [3 skipped]
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler.access$1500(CqlRequestHandler.java:95)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestHandler$NodeResponseCallback.onResponse(CqlRequestHandler.java:655)
+

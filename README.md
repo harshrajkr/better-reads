@@ -476,7 +476,24 @@ env | grep ASTRA
 
 > 🖥️ `output`
 >
-> _Same as before_
+> _Values have been omitted in this guide for security reason_
+> ```
+> ASTRA_DB_APPLICATION_TOKEN=...
+> ASTRA_DB_GRAPHQL_URL=...
+> ASTRA_DB_GRAPHQL_URL_ADMIN=...
+> ASTRA_DB_GRAPHQL_URL_PLAYGROUND=...
+> ASTRA_DB_GRAPHQL_URL_SCHEMA=...
+> ASTRA_DB_ID=...
+> ASTRA_DB_KEYSPACE="better_reads"
+> ASTRA_DB_REGION="us-east1"
+> ASTRA_DB_REST_URL=...
+> ASTRA_DB_REST_URL_SWAGGER=...
+> ASTRA_DB_SECURE_BUNDLE_PATH=...
+> ASTRA_DB_SECURE_BUNDLE_URL=...
+> ASTRA_ORG_ID=...
+> ASTRA_ORG_NAME=...
+> ASTRA_ORG_TOKEN=...
+> ```
 
 
 - `✅ 2.1.c` **Open configuration file**
@@ -497,7 +514,7 @@ gp open /workspace/workshop-betterreads/better-reads-webapp/pom.xml
 </dependency>
 ```
 
-- `✅ 2.1.d` **Open `application.yaml` file**
+- `✅ 2.1.d` **Study `application.yaml` file**
 
 ```
 gp open /workspace/workshop-betterreads/better-reads-webapp/src/main/resources/application.yml
@@ -524,10 +541,9 @@ spring:
       schema-action: create-if-not-exists
 ```
 
-### 2.2 - Application Start
+### 2.2 - Start Application and first use
 
-
-- `✅ 2.1.d` **Open `application.yaml` file**
+- `✅ 2.2.a` **Known the URL of the application**
 
 - It would be handy to know the URL of the application
 
@@ -535,42 +551,35 @@ spring:
 gp url 8080
 ```
 
-- Start the app
+- `✅ 2.2.b` **Start the Application**
 
 ```
 cd /workspace/workshop-betterreads/better-reads-webapp
 mvn spring-boot:run
 ```
 
-- Output
+> 🖥️ `output`
+>
+> ```
+> BetterReads with Spring Boot, String Data, Spring NVC, Spring security
+> An application by JabaBrains.
+> The application will start at http://localhost:8080
+> 13:37:20.276 INFO  com.datastax.astra.sdk.AstraClient              : Setup of AstraClient from application.yml
+> 13:37:20.280 INFO  com.datastax.astra.sdk.config.AstraClientConfig : Initializing [AstraClient]
+> 13:37:20.459 INFO  com.datastax.astra.sdk.AstraClient              : + API(s) Devops     [ENABLED]
+> 13:37:20.459 INFO  com.datastax.astra.sdk.AstraClient              : + Db: id > [3ed83de7-d97f-4fb6-bf9f-82e9f7eafa23] and region [eu-west-1]
+> 13:37:20.460 INFO  com.datastax.astra.sdk.AstraClient              : + Downloading bundles in: [/home/gitpod/.astra]
+> 13:37:21.124 INFO  com.datastax.astra.sdk.databases.DatabaseClient : + SecureBundle found : scb_3ed83de7-d97f-4fb6-bf9f-82e9f7eafa23_eu-west-1.zip
+> 13:37:21.124 INFO  com.datastax.astra.sdk.databases.DatabaseClient : + SecureBundle found : scb_3ed83de7-d97f-4fb6-bf9f-82e9f7eafa23_eu-central-1.zip
+> 13:37:23.041 INFO  com.datastax.astra.sdk.AstraClient              : [AstraClient] has been initialized.
+> ```
+
+- `✅ 2.2.c` **Run the application**
+
+Open a new terminal (yes a 3rd one again, 2 previous are busy, same icon) and enter the command.
 
 ```
- ________          __                   __                  ________                     .__                                     
- \______ \ _____ _/  |______    _______/  |______  ___  ___ \______ \   _______  __ ____ |  |   ____ ______   ___________  ______
-  |    |  \\__  \\   __\__  \  /  ___/\   __\__  \ \  \/  /  |    |  \_/ __ \  \/ // __ \|  |  /  _ \\____ \_/ __ \_  __ \/  ___/
-  |    `   \/ __ \|  |  / __ \_\___ \  |  |  / __ \_>    <   |    `   \  ___/\   /\  ___/|  |_(  <_> )  |_> >  ___/|  | \/\___ \ 
- /_______  (____  /__| (____  /____  > |__| (____  /__/\_ \ /_______  /\___  >\_/  \___  >____/\____/|   __/ \___  >__|  /____  >
-         \/     \/          \/     \/            \/      \/         \/     \/          \/            |__|        \/           \/ 
-
- BetterReads with Spring Boot, String Data, Spring NVC, Spring security
- An application by JabaBrains.
- The application will start at http://localhost:8080
-
-
-13:37:20.276 INFO  com.datastax.astra.sdk.AstraClient              : Setup of AstraClient from application.yml
-13:37:20.280 INFO  com.datastax.astra.sdk.config.AstraClientConfig : Initializing [AstraClient]
-13:37:20.459 INFO  com.datastax.astra.sdk.AstraClient              : + API(s) Devops     [ENABLED]
-13:37:20.459 INFO  com.datastax.astra.sdk.AstraClient              : + Db: id [3ed83de7-d97f-4fb6-bf9f-82e9f7eafa23] and region [eu-west-1]
-13:37:20.460 INFO  com.datastax.astra.sdk.AstraClient              : + Downloading bundles in: [/home/gitpod/.astra]
-13:37:21.124 INFO  com.datastax.astra.sdk.databases.DatabaseClient : + SecureBundle found : scb_3ed83de7-d97f-4fb6-bf9f-82e9f7eafa23_eu-west-1.zip
-13:37:21.124 INFO  com.datastax.astra.sdk.databases.DatabaseClient : + SecureBundle found : scb_3ed83de7-d97f-4fb6-bf9f-82e9f7eafa23_eu-central-1.zip
-13:37:23.041 INFO  com.datastax.astra.sdk.AstraClient              : [AstraClient] has been initialized.
-```
-
-- Open a new terminal (yes a 3rd one again, 2 previous are busy, same icon) and enter the command.
-
-```
-gp preview $(gp url 8080)
+gp preview $(gp url 8080) --external
 ```
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/app1.png?raw=true)
@@ -588,51 +597,53 @@ This is only what we can do at this point. To mark the book as read we will need
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 11. Setup Authentication
+### 2.3 - Setup Authentication for Google
 
-### ✅ 11a. Setup Google OAuth2 (optional)
+- `✅ 2.3.a` - Connect to [Google Cloud Platform](https://console.cloud.google.com)
 
-- Connect to [Google Cloud Platform](https://console.cloud.google.com)
-
-- Create a new project if needed, on the screens i put `BetterReadsDemoApps` and click `[CREATE]]`
+- `✅ 2.3.b` - Create a new project if needed, on the screens i put `BetterReadsDemoApps` and click `[CREATE]]`
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp1.png?raw=true)
 
-- Select `[ENABLE APIS AND SERVICES]` in menu
+- `✅ 2.3.c` - Select `[ENABLE APIS AND SERVICES]` in menu
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp2.png?raw=true)
 
-- Search for Gmail and Google Analytics Apis and add them to your project.
+- `✅ 2.3.d` - Search for Gmail and Google Analytics Apis and add them to your project.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp3.png?raw=true)
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp4.png?raw=true)
 
-- Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo.
+- `✅ 2.3.d` - Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp5.png?raw=true)
 
-- Check `External` (or internal as you prefer to limit scope).
+- `✅ 2.3.f` - Check `External` (or internal as you prefer to limit scope).
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp6.png?raw=true)
 
-- On menu in the left select *Credentials* and use the button on top `[CREATE CREDENTIALS]`/ OAuth ClientID.
+- `✅ 2.3.g` - On menu in the left select *Credentials* and use the button on top `[CREATE CREDENTIALS]`/ OAuth ClientID.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp7.png?raw=true)
 
-- Select `Web Application` and provide it a name
+- `✅ 2.3.h` - Select `Web Application` and provide it a name
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp8.png?raw=true)
 
-- Add the URL home page. It will the result of `gp url 8080` command on gitpod or *http://localhost:8080* if you work locally.
+- `✅ 2.3.i` - Add the URL home page. It will the result of `gp url 8080` command on gitpod or *http://localhost:8080* if you work locally.
 
 **The screenshots below show `Google` authentication when the app is running on `localhost`. Carefully adjust the URLs accordingly to the Gitpod URL when application is running on Gitpod.**
 
-- Add the redirect *http://localhost:8080/login/oauth2/code/google* if you work locally or the result of `echo $(gp url 8080)/login/oauth2/code/google` on gitpod.
+- `✅ 2.3.j` - Add the redirect url as output if you work locally or the result (*http://localhost:8080/login/oauth2/code/google* if you work locally)
+
+```
+echo $(gp url 8080)/login/oauth2/code/google`
+```
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp9.png?raw=true)
 
-- A new page will open with your `clientId` and `client Secret`. Make sure you copy them locallym you will need to setup your application with it.
+- `✅ 2.3.k` - A new page will open with your `clientId` and `client Secret`. Make sure you copy them locally you will need to setup your application with it.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp10.png?raw=true)
 
@@ -644,13 +655,13 @@ Just kidding ^_^
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp11.png?raw=true)
 
-- Open file `src/main/resources/application.yml` in your project
+- `✅ 2.3.l` - Open file `src/main/resources/application.yml` in your project
 
 ```
 gp open /workspace/workshop-betterreads/better-reads-webapp/src/main/resources/application.yml
 ```
 
-- Changes keys `client-id` and `client-secret` with your values for the provider `Google`.
+- `✅ 2.3.m` - Changes keys `client-id` and `client-secret` with your values for the provider `Google`.
 
 ```yaml
   security:
@@ -662,12 +673,11 @@ gp open /workspace/workshop-betterreads/better-reads-webapp/src/main/resources/a
             client-secret: change
 ```
 
-
-### ✅ 11b. Setup up Github
+### 2.4 - Setup Authentication for Github
 
 As each attendee has a different URL in gitpod, you will have to create your own github `OAuth Apps - Let's do this together.
 
-- For github settings we will have to enter a callback URL. To know which one enter use the following command
+#### `✅ 2.4.a` - For github settings we will have to enter a callback URL. To know which one enter use the following command
 
 ```
 clear

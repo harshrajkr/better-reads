@@ -109,8 +109,7 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 #### 5.1 - Create an Astra Account
 
-**Datastax Astra:**
-Datastax Astra is a cloud-native, fully managed database-as-a-service (DBaaS) based on Apache Cassandra. It provides a scalable, performant and highly available database solution without the operational overhead of managing Cassandra clusters. Astra supports both SQL and NoSQL APIs, and includes features like backup and restore, monitoring and alerting, and access control. It enables developers to focus on application development while the database infrastructure is managed by Datastax.
+> **Note**: **Datastax Astra** is a cloud-native, fully managed database-as-a-service (DBaaS) based on Apache Cassandra. It provides a scalable, performant and highly available database solution without the operational overhead of managing Cassandra clusters. Astra supports both SQL and NoSQL APIs, and includes features like backup and restore, monitoring and alerting, and access control. It enables developers to focus on application development while the database infrastructure is managed by Datastax.
 
 - `✅ 5.1.a` - Access [https://astra.datastax.com](https://astra.datastax.com) and register with `Google` or `Github` account
 
@@ -130,8 +129,7 @@ Datastax Astra is a cloud-native, fully managed database-as-a-service (DBaaS) ba
 
 #### 5.3 - Open your Environment
 
-**Gitpod:**
-Gitpod is a cloud-based integrated development environment (IDE) that allows developers to build, test and run applications directly in their web browser. It provides preconfigured dev environments for GitHub projects, so developers can start coding immediately without setting up local environment. Gitpod saves time and streamlines the development process.
+> **Note**: **Gitpod** is a cloud-based integrated development environment (IDE) that allows developers to build, test and run applications directly in their web browser. It provides preconfigured dev environments for GitHub projects, so developers can start coding immediately without setting up local environment. Gitpod saves time and streamlines the development process.
 
 > `✅ 5.3.a` ↗️ _Right Click and select open as a new Tab..._
 >
@@ -139,7 +137,7 @@ Gitpod is a cloud-based integrated development environment (IDE) that allows dev
 
 #### 5.4 - Setup Astra CLI
 
-**Astra CLI:** The Astra CLI is a command-line interface (CLI) tool for managing Apache Cassandra databases hosted on Datastax Astra. It allows developers to perform tasks like creating and managing databases, executing Cassandra queries, and managing security and access control. The Astra CLI simplifies database management and provides an alternative to the Astra web interface, enabling automation and integration with other tools and workflows.
+> **Note**:  The **Astra CLI** is a command-line interface (CLI) tool for managing Apache Cassandra databases hosted on Datastax Astra. It allows developers to perform tasks like creating and managing databases, executing Cassandra queries, and managing security and access control. The Astra CLI simplifies database management and provides an alternative to the Astra web interface, enabling automation and integration with other tools and workflows.
 
 - `✅ 5.4.a` **Locate the terminal called `setup` and check that the CLI is available**
 

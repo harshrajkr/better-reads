@@ -15,26 +15,30 @@ Learn how to build an app end-to-end application with Spring ecosystem *(boot, m
 
 <img src="https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/screenshot.png?raw=true" align="right" width="400px"/>
 
-**MATERIALS**
-- [Objectives](#1-objectives)
-- [Acknowledgements](#2-acknowledgements)
-- [Frequently asked questions](#3-frequently-asked-questions)
-- [Materials for the Session](#4-materials-for-the-session)
+**HOUSEKEEPING**
+- [Objectives](#objectives)
+- [Acknowledgements](#acknowledgements)
+- [Frequently asked questions](#frequently-asked-questions)
+- [Materials for the Session](#materials-for-the-session)
 
-**LAB1 - Database Setup**
-- 1.1 [test](#)
-- 1.2 [test](#)
+[**LAB1 - Database Initialization**](#1-database-initialization)
+- [1.1 - Create Astra Account](#11---create-an-astra-account)
+- [1.2 - Create Astra Token](#12---create-an-astra-token)
+- [1.3 - Open your environment](#13---open-your-environment)
+- [1.4 - Setup Astra CLI](#14---setup-astra-cli)
+- [1.5 - Create Database](#15---create-database)
+- [1.6 - Create Schema](#16---create-schema)
+- [1.7 - Load Data](#17---load-data)
 
-2. [Create your Token](#6-create-astra-token)
-3. [Start and setup Gitpod](#7-start-and-setup-gitpod)
-8. [Work with CqlSh](#8-work-with-cqlsh)
-9. [Load Data with DSBulk](#9-load-data-with-dsbulk)
-10. [Use Application as anonymous](#10-use-application-as-anonymous)
-11. [Setup Authentication](#11-setup-authentication)
-12. [Authenticate and use application](#12-authenticate-and-use-application)
-13. [Homeworks](#13-homeworks)
+**LAB2 - Application**
+- [Use Application as anonymous](#10-use-application-as-anonymous)
+- [Setup Authentication](#11-setup-authentication)
+- [Authenticate and use application](#12-authenticate-and-use-application)
+- [Homeworks](#13-homeworks)
 
-## 1. Objectives
+## HouseKeeping
+
+### Objectives
 
 * Discover how to use the following technologies: 
   * **Spring Data:** the Object Mapping layer of Spring
@@ -47,11 +51,11 @@ Learn how to build an app end-to-end application with Spring ecosystem *(boot, m
   * **Astra DB** (a Database-as-a-service built on Apache Cassandra)
 * Han fun with an interactive session
 
-## 2. Acknowledgements
+### Acknowledgements
 
 This application has been built based on the work of [**Java Brains**](https://www.youtube.com/channel/UCYt1sfh5464XaDBH0oH_o7Q), a famous youtuber *(500k+ subscribers)*. On his channel you can find the full [*Code with me Series*](https://www.youtube.com/watch?v=LxVGFBRpEFM), 16 episodes for building this application step-by-step. The link to each episode is provided at the end of this readme.
 
-## 3. Frequently asked questions
+### Frequently asked questions
 
 <p/>
 <details>
@@ -94,7 +98,7 @@ Attending the session is not enough. You need to complete the homeworks detailed
 
 > [🏠 Back to Table of Contents](#-table-of-content)
 
-## 4. Materials for the Session
+### Materials for the Session
 
 It doesn't matter if you join our workshop live or you prefer to work at your own pace,
 we have you covered. In this repository, you'll find everything you need for this workshop:
@@ -106,27 +110,25 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 ----
 
-# 🏁 Start Hands-on
+## 1. Database Initialization
 
-## 5. Database Initialization
-
-#### 5.1 - Create an Astra Account
+#### 1.1 - Create an Astra Account
 
 > **Note**: **Datastax Astra** is a cloud-native, fully managed database-as-a-service (DBaaS) based on Apache Cassandra. It provides a scalable, performant and highly available database solution without the operational overhead of managing Cassandra clusters. Astra supports both SQL and NoSQL APIs, and includes features like backup and restore, monitoring and alerting, and access control. It enables developers to focus on application development while the database infrastructure is managed by Datastax.
 
-- `✅ 5.1.a` - Access [https://astra.datastax.com](https://astra.datastax.com) and register with `Google` or `Github` account
+- `✅ 1.1.a` - Access [https://astra.datastax.com](https://astra.datastax.com) and register with `Google` or `Github` account
 
 ![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-1.png?raw=true)
 
-#### 5.2 - Create an Astra Token
+#### 1.2 - Create an Astra Token
 
-- `✅ 5.2.a` Locate `Settings` (#1) in the menu on the left, then `Token Management` (#2) 
+- `✅ 1.2.a` Locate `Settings` (#1) in the menu on the left, then `Token Management` (#2) 
 
-- `✅ 5.2.b`Select the role `Organization Administrator` before clicking `[Generate Token]`
+- `✅ 1.2.b`Select the role `Organization Administrator` before clicking `[Generate Token]`
 
 ![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-2.png?raw=true)
 
-- `✅ 5.2.c` - Copy your token in the clipboard. With this token we will now create what is needed for the training.
+- `✅ 1.2.c` - Copy your token in the clipboard. With this token we will now create what is needed for the training.
 
 ![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-3.png?raw=true)
 
@@ -134,15 +136,15 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 > **Note**: **Gitpod** is a cloud-based integrated development environment (IDE) that allows developers to build, test and run applications directly in their web browser. It provides preconfigured dev environments for GitHub projects, so developers can start coding immediately without setting up local environment. Gitpod saves time and streamlines the development process.
 
-> `✅ 5.3.a` ↗️ _Right Click and select open as a new Tab..._
+> `✅ 1.3.a` ↗️ _Right Click and select open as a new Tab..._
 >
 > [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-betterreads)
 
-#### 5.4 - Setup Astra CLI
+#### 1.4 - Setup Astra CLI
 
 > **Note**:  The **Astra CLI** is a command-line interface (CLI) tool for managing Apache Cassandra databases hosted on Datastax Astra. It allows developers to perform tasks like creating and managing databases, executing Cassandra queries, and managing security and access control. The Astra CLI simplifies database management and provides an alternative to the Astra web interface, enabling automation and integration with other tools and workflows.
 
-- `✅ 5.4.a` **Locate the terminal called `setup` and check that the CLI is available**
+- `✅ 1.4.a` **Locate the terminal called `setup` and check that the CLI is available**
 
 ```
 astra --version
@@ -155,7 +157,7 @@ astra --version
 > 0.2.1
 > ```
 
-- `✅ 5.4.b` **Trigger the setup command**
+- `✅ 1.4.b` **Trigger the setup command**
 
 ```
 astra setup
@@ -179,7 +181,7 @@ astra setup
 > $ Enter an Astra token:
 > ```
 
-- `✅ 5.4.c` **Provide your token as asked (starting witg AstraCS:..)**
+- `✅ 1.4.c` **Provide your token as asked (starting witg AstraCS:..)**
 
 > 🖥️ `output`
 >
@@ -188,7 +190,7 @@ astra setup
 > [OK]    Enter 'astra help' to list available commands.
 > ```
 
-- `✅ 5.4.d` **List your existing Users.**
+- `✅ 1.4.d` **List your existing Users.**
 
 ```bash
 astra user list
@@ -204,9 +206,9 @@ astra user list
 > +--------------------------------------+-----------------------------+---------------------+
 > ```
 
-#### 5.5 - Create database
+#### 1.5 - Create database
 
-- `✅ 5.5.a` **Create database `workshops` with keyspace `better_reads`**
+- `✅ 1.5.a` **Create database `workshops` with keyspace `better_reads`**
 
 ```bash
 astra db create workshops -k better_reads --if-not-exist
@@ -237,7 +239,7 @@ astra db create workshops -k better_reads --if-not-exist
 > [OK]    Database 'workshops' is ready.
 > ```
 
-- `✅ 5.5.b` **Check the status of database `workshops`**
+- `✅ 1.5.b` **Check the status of database `workshops`**
 
 ```bash
 astra db status workshops
@@ -249,7 +251,7 @@ astra db status workshops
 > [ INFO ] - Database 'workshops' has status 'ACTIVE'
 > ```
 
-- `✅ 5.5.c` **Get the informations for your database including the keyspace list**
+- `✅ 1.5.c` **Get the informations for your database including the keyspace list**
 
 ```bash
 astra db get workshops
@@ -277,9 +279,9 @@ astra db get workshops
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-#### 5.6 - Create Schema
+#### 1.6 - Create Schema
 
-- `✅ 5.6.a` **Check tables list leveraging `cqlsh`**
+- `✅ 1.6.a` **Check tables list leveraging `cqlsh`**
 
 ```bash
 astra db cqlsh workshops -k better_reads -e "describe tables;"
@@ -292,7 +294,7 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 > ```
 
 
-- `✅ 5.6.b` **Create tables**
+- `✅ 1.6.b` **Create tables**
 
 ```bash
 astra db cqlsh workshops \
@@ -307,7 +309,7 @@ astra db cqlsh workshops \
 > [INFO] Cqlsh is starting, please wait for connection establishment...
 > ```
 
-- `✅ 5.6.c` **List tables**
+- `✅ 1.6.c` **List tables**
 
 ```bash
 astra db cqlsh workshops -k better_reads -e "describe tables;"
@@ -321,9 +323,9 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-#### 5.7 - Load Data
+#### 1.7 - Load Data
 
-- `✅ 5.7.a` **Show content of the CSV File**
+- `✅ 1.7.a` **Show content of the CSV File**
 
 ```
 head -n 10 /workspace/workshop-betterreads/dataset/book_by_id_0.csv 

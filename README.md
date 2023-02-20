@@ -105,62 +105,178 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 # 🏁 Start Hands-on
 
-## 5. Create Astra DB Instance
+## 5. Database Initialization
 
-> Leveraging [Database creation guide](https://github.com/datastaxdevs/awesome-astra/wiki/Create-an-AstraDB-Instance) create a database. *Right-Click the button* with *Open in a new TAB.*
+#### 5.1 - Create an Astra Account
 
-<a href="https://astra.dev/2-16"><img src="img/create_astra_db_button.png?raw=true" /></a>
+**Datastax Astra:**
+Datastax Astra is a cloud-native, fully managed database-as-a-service (DBaaS) based on Apache Cassandra. It provides a scalable, performant and highly available database solution without the operational overhead of managing Cassandra clusters. Astra supports both SQL and NoSQL APIs, and includes features like backup and restore, monitoring and alerting, and access control. It enables developers to focus on application development while the database infrastructure is managed by Datastax.
 
-|Field|Value|
-|---|---|
-|**Database Name**| `workshops`|
-|**Keyspace Name**| `better_reads`|
+- `✅ 5.1.a` - Access [https://astra.datastax.com](https://astra.datastax.com) and register with `Google` or `Github` account
 
-#### ℹ️ Notes:
-- If you already have a DB, you may need to resume it using the [Resuming Guide](https://github.com/datastaxdevs/awesome-astra/wiki/How-to-resume-a-database).
-- If yout already have an active DB, simply add a keyspace `better_reads` using the `Add Keyspace` button on the bottom right hand corner of db dashboard page.
+![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-1.png?raw=true)
 
-[🏠 Back to Table of Contents](#-table-of-content)
+#### 5.2 - Create an Astra Token
 
-## 6. Create Astra Token
+- `✅ 5.2.a` Locate `Settings` (#1) in the menu on the left, then `Token Management` (#2) 
 
-> Leveraging [Token creation guide](https://github.com/datastaxdevs/awesome-astra/wiki/Create-an-Astra-Token) create a token. (`AstraCS:blablablabla`)
+- `✅ 5.2.b`Select the role `Organization Administrator` before clicking `[Generate Token]`
 
-|Field|Value|
-|---|---|
-|**Role**| `Database Administrator`|
+![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-2.png?raw=true)
 
-#### ℹ️ Notes:
-- If you already have a token from previous session you can use it. A token is not related to a particular DB by default but to organization.
+- `✅ 5.2.c` - Copy your token in the clipboard. With this token we will now create what is needed for the training.
 
-> **⚠️ Important**
-> ```
-> The instructor will show you on screen how to create a token 
-> but will have to destroy to token immediately for security reasons.
-> ```
+![](https://github.com/DataStax-Academy/cassandra-for-data-engineers/blob/main/images/setup-astra-3.png?raw=true)
 
-## 7. Start and setup Gitpod
+#### 5.3 - Open your Environment
 
-- Start gitpod with the button below *(right-click open in new tab)*
+**Gitpod:**
+Gitpod is a cloud-based integrated development environment (IDE) that allows developers to build, test and run applications directly in their web browser. It provides preconfigured dev environments for GitHub projects, so developers can start coding immediately without setting up local environment. Gitpod saves time and streamlines the development process.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-betterreads)
+> `✅ 5.3.a` ↗️ _Right Click and select open as a new Tab..._
+>
+> [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-betterreads)
 
-- Wait for the environment to initialize until you are asked to provide your token:
+#### 5.4 - Setup Astra CLI
+
+**Astra CLI:** The Astra CLI is a command-line interface (CLI) tool for managing Apache Cassandra databases hosted on Datastax Astra. It allows developers to perform tasks like creating and managing databases, executing Cassandra queries, and managing security and access control. The Astra CLI simplifies database management and provides an alternative to the Astra web interface, enabling automation and integration with other tools and workflows.
+
+- `✅ 5.4.a` **Locate the terminal called `setup` and check that the CLI is available**
 
 ```
-✔ Please paste the Database Admin Token here
+astra --version
 ```
 
-- Enter your token `AstraCS;blahblahblah` and press enter. Wait for all the operations to complete.
+> 🖥️ `output`
+>
+> ```
+> $ astra --version
+> 0.2.1
+> ```
+
+- `✅ 5.4.b` **Trigger the setup command**
+
+```
+astra setup
+```
+
+> 🖥️ `output`
+>
+> ```
+>     _____            __                  
+>    /  _  \   _______/  |_____________    
+>   /  /_\  \ /  ___/\   __\_  __ \__  \  
+>  /    |    \\___ \  |  |  |  | \// __ \_ 
+>  \____|__  /____  > |__|  |__|  (____  /
+>          \/     \/                   \/ 
+>            Version: 0.2.1
+> 
+>  -----------------------
+>  ---      SETUP      ---
+>  -----------------------
+> 
+> $ Enter an Astra token:
+> ```
+
+- `✅ 5.4.c` **Provide your token as asked (starting witg AstraCS:..)**
+
+> 🖥️ `output`
+>
+> ```
+> [OK]    Configuration has been saved.
+> [OK]    Enter 'astra help' to list available commands.
+> ```
+
+- `✅ 5.4.d` **List your existing Users.**
 
 ```bash
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.676 s
-[INFO] Finished at: 2022-02-14T13:00:07Z
-[INFO] ------------------------------------------------------------------------
+astra user list
 ```
+
+> 🖥️ `output`
+>
+> ```
+> +--------------------------------------+-----------------------------+---------------------+
+> | User Id                              | User Email                  | Status              |
+> +--------------------------------------+-----------------------------+---------------------+
+> | b665658a-ae6a-4f30-a740-2342a7fb469c | cedrick.lunven@datastax.com | active              |
+> +--------------------------------------+-----------------------------+---------------------+
+> ```
+
+#### 5.5 - Create database
+
+- `✅ 5.5.a` **Create database `workshops` with keyspace `better_reads`**
+
+```bash
+astra db create workshops -k better_reads --if-not-exist
+```
+
+> 🖥️ `Output`
+>
+> ```
+> [ INFO ] - Database 'workshops' already exist. Connecting to database.
+> [ INFO ] - Database 'workshops' has status 'MAINTENANCE' waiting to be 'ACTIVE' ...
+>[ INFO ] - Database 'workshops' has status 'ACTIVE' (took 7983 millis)
+> ```
+
+| Chunk         | Description     |
+|--------------|-----------|
+| `db create` | Operation executed `create` in group `db`  |
+| `workshops` | Name of the database, our argument |
+|`-k better_reads` | Name of the keyspace, a db can contains multiple keyspaces |
+| `--if-not-exist` | Flag for itempotency creating only what if needed |
+
+> **Note**: If the database already exist but has not been used for while the status will be `HIBERNATED`. The previous command will resume the db an create the new keyspace but it can take about a minute to execute.
+>
+> ```
+> [OK]    Resuming Database 'com.dtsx.astra.sdk.db.domain.Database@406005b3' ...
+> [INFO]  Database 'workshops' has status 'RESUMING' waiting to be 'ACTIVE' ...
+> [INFO]  Database 'workshops' has status 'ACTIVE' (took 41466 millis)
+> [INFO]  Keyspace  'workshops' already exists. Connecting to keyspace.
+> [OK]    Database 'workshops' is ready.
+> ```
+
+- `✅ 1.5.b` **Check the status of database `workshops`**
+
+```bash
+astra db status workshops
+```
+
+> 🖥️ `output`
+>
+> ```
+> [ INFO ] - Database 'workshops' has status 'ACTIVE'
+> ```
+
+- `✅ 1.5.c` **Get the informations for your database including the keyspace list**
+
+```bash
+astra db get workshops
+```
+
+> 🖥️ `output`
+>
+> ```
+> +------------------------+-----------------------------------------+
+> | Attribute              | Value                                   |
+> +------------------------+-----------------------------------------+
+> | Name                   | workshops                               |
+> | id                     | bb61cfd6-2702-4b19-97b6-3b89a04c9be7    |
+> | Status                 | ACTIVE                                  |
+> | Default Cloud Provider | GCP                                     |
+> | Default Region         | us-east1                                |
+> | Default Keyspace       | better_reads                            |
+> | Creation Time          | 2022-08-29T06:13:06Z                    |
+> |                        |                                         |
+> | Keyspaces              | [0] booking                             |
+> |                        |                                         |
+> |                        |                                         |
+> | Regions                | [0] us-east-1                           |
+> |                        |                                         |
+> +------------------------+-----------------------------------------+
+> ```
+
+[🏠 Back to Table of Contents](#-table-of-content)
 
 ## 8. Work with CqlSh
 

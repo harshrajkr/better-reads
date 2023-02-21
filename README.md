@@ -652,23 +652,24 @@ This is only what we can do at this point. To mark the book as read we will need
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/googleanalytics_2.png?raw=true)
 
-- `✅ 2.3.f` - Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo.
-
-![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp5.png?raw=true)
-
-- `✅ 2.3.f` - Check `External` (or internal as you prefer to limit scope).
+- `✅ 2.3.f` - Check `External` (or internal as you prefer to limit scope). Then select `CREATE`
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp6.png?raw=true)
 
-- `✅ 2.3.g` - On menu in the left select *Credentials* and use the button on top `[CREATE CREDENTIALS]`/ OAuth ClientID.
+- `✅ 2.3.g` - Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo. Go to the bottom of the page and also provide an email. You can then `[Save and continue]`.
+
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcpoauth1.png?raw=true)
+
+
+- `✅ 2.3.h` - On menu in the left select *Credentials* and use the button on top `[CREATE CREDENTIALS]`/ OAuth ClientID.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp7.png?raw=true)
 
-- `✅ 2.3.h` - Select `Web Application` and provide it a name
+- `✅ 2.3.i` - Select `Web Application` and provide it a name
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp8.png?raw=true)
 
-- `✅ 2.3.i` - Add the URL home page. It will the result of `gp url 8080` command on gitpod or *http://localhost:8080* if you work locally.
+- `✅ 2.3.j` - Add the URL home page. It will the result of `gp url 8080` command on gitpod or *http://localhost:8080* if you work locally.
 
 **The screenshots below show `Google` authentication when the app is running on `localhost`. Carefully adjust the URLs accordingly to the Gitpod URL when application is running on Gitpod.**
 

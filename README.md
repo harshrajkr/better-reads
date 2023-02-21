@@ -293,6 +293,11 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 > 🖥️ `output`
 >
 > ```
+> [INFO]  Downloading Cqlshell, please wait...
+> [INFO]  Installing  archive, please wait...
+> [INFO]  Secure connect bundles have been downloaded.
+> [INFO]  Cqlsh is starting, please wait for connection establishment...
+> 
 > <empty>
 > ```
 
@@ -321,6 +326,9 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 > 🖥️ `output`
 >
 > ```
+> [INFO] Secure connect bundles have been downloaded.
+> [INFO] Cqlsh is starting, please wait for connection establishment...
+>
 > author_by_id  book_by_id  book_by_user_and_bookid  books_by_user
 > ```
 
@@ -376,6 +384,8 @@ astra db load workshops \
 > 🖥️ `output`
 >
 > ```
+> [INFO]  Downloading Dsbulk, please wait...
+> [INFO]  Installing  archive, please wait...
 > [INFO] Secure connect bundles have been downloaded.
 > [INFO] RUNNING: dsbulk load -u token -p xxxxb -b /yyy1.zip -k better_reads -t book_by_id -logDir ./logs --log.verbosity normal --schema.allowMissingFields true -maxConcurrentQueries AUTO -delim , -url ./dataset/book_by_id_0.csv -header true -encoding UTF-8 -skipRecords 0 -maxErrors -1
 > [INFO] DSBulk is starting please wait ...
@@ -421,7 +431,7 @@ astra db load workshops \
 ```
 astra db count workshops \
      -k better_reads \
-     -t book_by_id \
+     -t book_by_id
 ```
 
 > 🖥️ `output`
@@ -430,7 +440,6 @@ astra db count workshops \
 > Picked up JAVA_TOOL_OPTIONS:  -Xmx2576m
 >  total | failed | rows/s |  p50ms |    p99ms |   p999ms
 > 499,679 |      0 | 57,806 | 210.15 | 6,207.57 | 6,207.57
-> 
 > ```
 
 [🏠 Back to Table of Contents](#-table-of-content)
@@ -474,7 +483,7 @@ cat .env
 set -a
 source .env
 set +a
-env | grep ASTRA
+env | grep ASTRA_DB_
 ```
 
 > 🖥️ `output`
@@ -493,9 +502,6 @@ env | grep ASTRA
 > ASTRA_DB_REST_URL_SWAGGER=...
 > ASTRA_DB_SECURE_BUNDLE_PATH=...
 > ASTRA_DB_SECURE_BUNDLE_URL=...
-> ASTRA_ORG_ID=...
-> ASTRA_ORG_NAME=...
-> ASTRA_ORG_TOKEN=...
 > ```
 
 
@@ -511,8 +517,8 @@ gp open /workspace/workshop-betterreads/better-reads-webapp/pom.xml
 
 ```xml
 <dependency>
-	<groupId>com.datastax.astra</groupId>
-	<artifactId>astra-spring-boot-starter</artifactId>
+  <groupId>com.datastax.astra</groupId>
+  <artifactId>astra-spring-boot-starter</artifactId>
   <version>${astra-sdk.version}</version>
 </dependency>
 ```
@@ -577,12 +583,13 @@ mvn spring-boot:run
 > 13:37:23.041 INFO  com.datastax.astra.sdk.AstraClient              : [AstraClient] has been initialized.
 > ```
 
-- `✅ 2.2.c` **Run the application**
+A new tab should have opened in your browser. You can also open a new terminal and enter the command.
 
-Open a new terminal (yes a 3rd one again, 2 previous are busy, same icon) and enter the command.
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/new_terminal.png?raw=true)
+
 
 ```
-gp preview $(gp url 8080) --external
+gp preview $(gp url 8080)
 ```
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/app1.png?raw=true)

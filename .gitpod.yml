@@ -8,6 +8,7 @@ tasks:
       unset JAVA_TOOL_OPTIONS
       source /home/gitpod/.astra/cli/astra-init.sh
       cd /workspace/workshop-betterreads
+      clear
 ports:
   - port: 8080
     onOpen: open-browser

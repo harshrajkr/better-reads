@@ -652,7 +652,6 @@ This is only what we can do at this point. To mark the book as read we will need
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/googleanalytics_2.png?raw=true)
 
-
 - `✅ 2.3.f` - Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp5.png?raw=true)

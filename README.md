@@ -594,16 +594,17 @@ gp preview $(gp url 8080)
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/app1.png?raw=true)
 
-- In the search item look for `Glimpses of ancient Sowams` you can search to whatever you want it will request open library ut during this workshop you only imported a subset of books, let us pick one you imported.
+- `✅ 2.2.c`- **Show Book details**
+
+In the search item look for `Glimpses of ancient Sowams` you can search to whatever you want it will request open library ut during this workshop you only imported a subset of books, let us pick one you imported.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/app2.png?raw=true)
 
-- Select the first item, if you select the second you will hit the page book not found as this book is not in the DB.
+Select the first item, if you select the second you will hit the page book not found as this book is not in the DB.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/app3.png?raw=true)
 
 This is only what we can do at this point. To mark the book as read we will need to authenticate with `Google` or `Github`.
-
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
@@ -615,17 +616,44 @@ This is only what we can do at this point. To mark the book as read we will need
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp1.png?raw=true)
 
+- `✅ 2.3.c` - Select `Api and Services` on the project home page
+
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp_welcome.png?raw=true)
+
 - `✅ 2.3.c` - Select `[ENABLE APIS AND SERVICES]` in menu
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp2.png?raw=true)
 
-- `✅ 2.3.d` - Search for Gmail and Google Analytics Apis and add them to your project.
+- `✅ 2.3.d` - Search for `Gmail Apis` and add them to your project.
+
+**Look For API**
+
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gmail_2.png?raw=true)
+
+**Select API**
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp3.png?raw=true)
 
+**Output**
+
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gmail_3.png?raw=true)
+
+- `✅ 2.3.e` - Search for `Google Analytics Apis` and add them to your project.
+
+**Look For API**
+
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/googleanalytics_1.png?raw=true)
+
+**Select API**
+
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp4.png?raw=true)
 
-- `✅ 2.3.d` - Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo.
+**Output**
+
+![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/googleanalytics_2.png?raw=true)
+
+
+- `✅ 2.3.f` - Select `[OAuth consent screen]` in the menu on the left. Provide your application name, a support email and the application logo.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp5.png?raw=true)
 

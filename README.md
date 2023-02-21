@@ -669,14 +669,16 @@ This is only what we can do at this point. To mark the book as read we will need
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp8.png?raw=true)
 
-- `✅ 2.3.j` - Add the URL home page. It will the result of `gp url 8080` command on gitpod or *http://localhost:8080* if you work locally.
-
-**The screenshots below show `Google` authentication when the app is running on `localhost`. Carefully adjust the URLs accordingly to the Gitpod URL when application is running on Gitpod.**
-
-- `✅ 2.3.j` - Add the redirect url as output if you work locally or the result (*http://localhost:8080/login/oauth2/code/google* if you work locally)
+- `✅ 2.3.j` - For `Authorized JavaScript origins` use the output of :
 
 ```
-echo $(gp url 8080)/login/oauth2/code/google`
+gp url 8080
+```
+
+- `✅ 2.3.j` - For `Authorized redirect URIs` use the output of 
+
+```
+echo $(gp url 8080)/login/oauth2/code/google
 ```
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp9.png?raw=true)

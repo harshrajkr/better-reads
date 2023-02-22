@@ -675,7 +675,7 @@ This is only what we can do at this point. To mark the book as read we will need
 gp url 8080
 ```
 
-- `✅ 2.3.j` - For `Authorized redirect URIs` use the output of 
+- `✅ 2.3.k` - For `Authorized redirect URIs` use the output  and then `[Create]`
 
 ```
 echo $(gp url 8080)/login/oauth2/code/google
@@ -683,7 +683,8 @@ echo $(gp url 8080)/login/oauth2/code/google
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp9.png?raw=true)
 
-- `✅ 2.3.k` - A new page will open with your `clientId` and `client Secret`. Make sure you copy them locally you will need to setup your application with it.
+
+- `✅ 2.3.l` - A new page will open with your `clientId` and `client Secret`. Make sure you copy them locally you will need to setup your application with it.
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp10.png?raw=true)
 
@@ -695,13 +696,13 @@ Just kidding ^_^
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp11.png?raw=true)
 
-- `✅ 2.3.l` - Open file `src/main/resources/application.yml` in your project
+- `✅ 2.3.m` - Open file `src/main/resources/application.yml` in your project
 
 ```
 gp open /workspace/workshop-betterreads/better-reads-webapp/src/main/resources/application.yml
 ```
 
-- `✅ 2.3.m` - Changes keys `client-id` and `client-secret` with your values for the provider `Google`.
+- `✅ 2.3.n` - Changes keys `client-id` and `client-secret` with your values for the provider `Google`.
 
 ```yaml
   security:

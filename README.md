@@ -678,7 +678,7 @@ gp url 8080
 - `✅ 2.3.k` - For `Authorized redirect URIs` use the output  and then `[Create]`
 
 ```
-echo $(gp url 8080)/login/oauth2/code/google
+echo $(gp url 8080)/login/oauth2/code/google | sed -r  "s/https/http/"
 ```
 
 ![new_terminal](https://github.com/datastaxdevs/workshop-betterreads/blob/master/img/gcp9.png?raw=true)
@@ -720,7 +720,7 @@ As each attendee has a different URL in gitpod, you will have to create your own
 
 ```
 clear
-echo $(gp url 8080)/login/oauth2/code/github
+echo $(gp url 8080)/login/oauth2/code/github | sed -r  "s/https/http/" 
 ```
 
 - `✅ 2.4.a` - Login to your github account and go to `Organizations`

@@ -1,13 +1,4 @@
 {
-  "name": "BetterReads Workshop",
-  "description": "Learn how to build an app end-to-end application with Spring ecosystem (boot, mvc, security, data, test, thymeleaf) and Apache Cassandra™.",
-  "duration": "50 minutes",
-  "skillLevel": "Intermediate",
-  "githubUrl": "https://github.com/datastaxdevs/workshop-betterreads",
-  "tags": [
-    { "name": "workshop", "name": "spring" }
-  ],
-  "category": "workshop",
-  "priority": 2,
-  "heroImage": "https://api.badgr.io/public/badges/LOZuswpVQKejngXt5We_rw/image?imageVersion=1"
+  "name": "BetterReads",
+  "description": "An end-to-end application with Spring ecosystem (boot, mvc, security, data, test, thymeleaf) and Apache Cassandra™."
 }

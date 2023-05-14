@@ -11,5 +11,6 @@
         "args": ["-l"],
         "overrideName": true
       }
-    }
+    },
+    "java.compile.nullAnalysis.mode": "disabled"
 }

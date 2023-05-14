@@ -11,11 +11,11 @@ spring:
       client:
         registration:
           github:
-            client-id: a02bb4dbf526cbd2bde1
-            client-secret: 6177e2f17443710a7a87cc98d6e2bb1de831facb
+            client-id: f3ac79c641966bee3b01
+            client-secret: 0f1da7ba8ff79d6747550da73326da810d096d25
           google:
-            client-id: 222261517939-30bksvlbjccqnthh3ofrqqhgebum7bre.apps.googleusercontent.com
-            client-secret: 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
+            client-id: 1030164748087-9c29uokvisqtau3spmhmp4h94lqdf7b7.apps.googleusercontent.com
+            client-secret: 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
   data:
     cassandra:
       schema-action: create-if-not-exists

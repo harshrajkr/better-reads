@@ -1,15 +1,5 @@
 <!--- STARTEXCLUDE --->
-# Workshops 📘 Better Reads 📘 !
-
-<img src="img/badge.png?raw=true" width="150" align="right" />
-
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/datastaxdevs/workshop-goodreads-clone)
-[![License Apache2](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Discord](https://img.shields.io/discord/685554030159593522)](https://discord.com/widget?id=685554030159593522&theme=dark)
-
-> ⚠️ Difficulty: **`Intermediate`, we expect you to already know Java and Spring.**
-
-Learn how to build an app end-to-end application with Spring ecosystem *(boot, mvc, security, data, test, thymeleaf)* and Apache Cassandra™.
+#  Better Reads 📘 !
 
 ## 📋 Table of content
 
@@ -287,7 +277,7 @@ astra db get workshops
 - `✅ 1.6.a` **Check tables list leveraging `cqlsh`**
 
 ```bash
-astra db cqlsh workshops -k better_reads -e "describe tables;"
+astra db cqlsh spring-project -k better_reads -e "describe tables;"
 ```
 
 > 🖥️ `output`
@@ -305,7 +295,7 @@ astra db cqlsh workshops -k better_reads -e "describe tables;"
 - `✅ 1.6.b` **Create tables**
 
 ```bash
-astra db cqlsh workshops \
+astra db cqlsh spring-project \
    -k better_reads \
    -f /workspace/workshop-betterreads/dataset/schema-ddl.cql
 ```
@@ -856,3 +846,5 @@ Don't forget to complete your assignment and get your verified skill badge! Fini
 - [16 - Wrapping Up](https://www.youtube.com/watch?v=hJLtsn2aSr4)
 
 ----
+#   b e t t e r - r e a d s  
+ 
